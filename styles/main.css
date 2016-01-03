@@ -1,0 +1,30 @@
+html, body {
+  margin : 0;
+  padding: 0;
+  color: red;
+  background: #fffff0;
+}
+
+#deck{
+  color: transparent;
+}
+
+#deck .card{
+  width: 120px;
+  height: 175px;
+  float: left;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 0 0;
+  transition: all .1s cubic-bezier(0.18, 0.89, 0.6, 1.59);
+}
+
+#deck .card:hover{
+  background: rgba(0,0,0,.05);
+}
+#deck .card.selected{
+  box-shadow: 0 0 0 5px;
+}

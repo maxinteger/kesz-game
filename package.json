@@ -1,0 +1,32 @@
+{
+  "name": "setgame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:server": "python -m SimpleHTTPServer",
+    "dev:js": "webpack -dw --progress --config webpack.config.js",
+    "dev": "parallelshell 'npm run dev:server' 'npm run dev:js'",
+    "build": "webpack && uglify -s ./bundle.js -o ./bundle.min.js"
+  },
+  "author": "Vadasz Laszlo <maxinteger@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.3.15",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "css-loader": "^0.23.0",
+    "node-sass": "^3.4.2",
+    "style-loader": "^0.13.0",
+    "uglify": "^0.1.5",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1",
+    "svg.js": "^2.2.5"
+  }
+}
