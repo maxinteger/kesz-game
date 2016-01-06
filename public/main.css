@@ -1,11 +1,23 @@
 html, body {
   margin : 0;
   padding: 0;
-  color: red;
   background: #fffff0;
 }
 
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#controls{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
 #deck{
+  max-width: 800px;
   color: transparent;
 }
 
@@ -15,11 +27,12 @@ html, body {
   float: left;
   padding: 10px;
   margin: 10px;
-  border: 2px solid gray;
+  border: 3px solid gray;
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 0 0 0;
-  transition: all .1s cubic-bezier(0.18, 0.89, 0.6, 1.59);
+  transition: box-shadow .1s cubic-bezier(0.18, 0.89, 0.6, 1.59), background .1s ease;
+  background: white;
 }
 
 #deck .card:hover{

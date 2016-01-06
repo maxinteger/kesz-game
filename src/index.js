@@ -190,6 +190,7 @@ let Manager = Object.assign(Object.create(null), {
 			.sample(num || TURN_PER_CARD)
 			.map( c => c.activate() )
 			.run();
+		$('#possible-solutions').text('Possible solutions: ' + this.getSolutions().length);
 	},
 
 	getSolutions(){
@@ -216,8 +217,12 @@ $(function () {
 	Manager.init($('#deck'));
 
 
-	$(document).on('click', '.card', function (event) {
-		Manager.toggleCard($(this).data('card'));
-	});
+	$(document)
+		.on('click', '.card', function (event) {
+			Manager.toggleCard($(this).data('card'));
+		})
+		.on('click', '#add-more', function () {
+			Manager.addCards(4);
+		});
 });
 
