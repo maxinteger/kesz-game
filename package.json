@@ -6,10 +6,10 @@
   "scripts": {
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:server": "python -m SimpleHTTPServer",
+    "dev:server": "cd public && python -m SimpleHTTPServer",
     "dev:js": "webpack -dw --progress --config webpack.config.js",
     "dev": "parallelshell 'npm run dev:server' 'npm run dev:js'",
-    "build": "webpack && uglify -s ./bundle.js -o ./bundle.min.js"
+    "build": "webpack --config webpack.config.js"
   },
   "author": "Vadasz Laszlo <maxinteger@gmail.com>",
   "license": "ISC",

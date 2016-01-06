@@ -3,7 +3,7 @@ module.exports = {
 	devtool: 'inline-source-map',
 	entry: './src/index.js',
 	output: {
-		path: './build',
+		path: './public/build',
 		filename: 'bundle.js',
 		sourceMapFilename: 'bundle.js.map'
 	},

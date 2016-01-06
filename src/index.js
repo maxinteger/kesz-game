@@ -96,7 +96,7 @@ let Card = Object.assign(Object.create(null), {
 		for (let i = 1; i <= this.count; i++){
 			let shape;
 			switch(this.shape){
-				case 'rect': shape = draw.rect(width, height); break;
+				case 'rect': shape = draw.rect(width, height).radius(5, 5); break;
 				case 'oval': shape = draw.ellipse(width, height); break;
 				case 'wave': shape = draw.path('m 90.511719,1022.2832 c -8.670526,0.09 -8.53283,7.3444 -14.296875,10.1992 ' +
 						'-6.312687,3.0339 -13.264888,0.6164 -22.015625,-5.2969 -13.387354,-9.0464 -31.585043,-2.8854 ' +
