@@ -93,6 +93,8 @@ let Card = Object.assign(Object.create(null), {
 			color = COLORS[this.color],
 			draw = SVG(this.el.get(0));
 
+		draw.viewbox(0, 0, 120, 175);
+
 		for (let i = 1; i <= this.count; i++){
 			let shape;
 			switch(this.shape){

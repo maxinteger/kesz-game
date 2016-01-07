@@ -1,23 +1,48 @@
 html, body {
   margin : 0;
   padding: 0;
-  background: #fffff0;
+  width: 100%;
+  height: 100%;
+  background: #DFE8E3;
 }
 
 body{
+  background: #fffff0;
+  border: 7px solid #DFE8E3;
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-family: Galindo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+button{
+  border: 6px solid #798C98;
+  border-radius: 15px;
+  background: #D3E2FC;
+  font-family: inherit;
+  padding: 2px 10px;
+  margin: 3px;
+  font-size: 18px;
+  color: #323F3F;
+}
+
+.text{
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 1px 1px 0 #2D3A39,  -1px 1px 0 #2D3A39,  1px -1px 0 #2D3A39,  -1px -1px 0 #2D3A39,  0 1px 0 #2D3A39,  0 -1px 0 #2D3A39,  -1px 0 0 #2D3A39,  1px 0 0 #2D3A39,  2px 2px 0 #2D3A39,  -2px 2px 0 #2D3A39,  2px -2px 0 #2D3A39,  -2px -2px 0 #2D3A39,  0 2px 0 #2D3A39,  0 -2px 0 #2D3A39,  -2px 0 0 #2D3A39,  2px 0 0 #2D3A39,  1px 2px 0 #2D3A39,  -1px 2px 0 #2D3A39,  1px -2px 0 #2D3A39,  -1px -2px 0 #2D3A39,  2px 1px 0 #2D3A39,  -2px 1px 0 #2D3A39,  2px -1px 0 #2D3A39,  -2px -1px 0 #2D3A39;
+}
+
 #controls{
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
 }
 
 #deck{
-  max-width: 800px;
+  max-width: 70%;
   color: transparent;
 }
 
