@@ -1,6 +1,9 @@
 import _ from 'lodash';
 import SVG from 'svg.js';
 import $ from 'jquery';
+import bacon from 'baconjs';
+
+$.fn.asEventStream = bacon.$.asEventStream;
 
 const
 	TURN_PER_CARD = 16,
@@ -214,17 +217,24 @@ let Manager = Object.assign(Object.create(null), {
 	}
 });
 
+
 $(function () {
 
 	Manager.init($('#deck'));
+	let $doc = $(document);
 
+	$doc
+		.asEventStream('click', '.card')
+		.map('.currentTarget')
+		.onValue( (target) => Manager.toggleCard($(target).data('card')) );
 
-	$(document)
-		.on('click', '.card', function (event) {
-			Manager.toggleCard($(this).data('card'));
-		})
-		.on('click', '#add-more', function () {
-			Manager.addCards(4);
-		});
+	$doc
+		.asEventStream('click', '#add-more')
+		.onValue( () => Manager.addCards(4) );
+
+	$(window)
+		.asEventStream('keydown')
+		.map('.keyCode')
+		.onValue( e => console.log(e));
 });
 

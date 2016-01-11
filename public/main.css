@@ -27,6 +27,7 @@ button{
   margin: 3px;
   font-size: 18px;
   color: #323F3F;
+  cursor: pointer;
 }
 
 .text{
